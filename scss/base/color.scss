@@ -1,0 +1,19 @@
+$red: #F92F04;
+$dark: #26562F;
+$green: #048E56;
+
+body {
+    background-color: white;
+}
+
+* {
+    color:$dark;
+}
+
+.red {
+    color: $red;
+}
+.green {
+    color:$green;
+}
+

@@ -1,0 +1,381 @@
+// * {
+//     // border: 1px solid pink;
+// }
+$red: #F92F04;
+$dark: #26562F;
+$green: #048E56;
+body {
+    overflow-x: hidden;
+}
+section {
+    min-height: 90vh;
+    max-height: 150vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+
+    // &>.flex-row {
+    //     flex: 1;
+    // }
+}
+
+// * {
+//     border: 1px solid orangered;
+// }
+//basic setup for flexbox container
+.flex-row {
+    display: flex;
+    align-items: stretch; // to make children tak up full space
+    justify-content: center;
+    margin: 2% 6%;
+
+    // the direct children of the flexbox will gain even distribution, seperate them into two parts
+    .flex-item {
+        flex: 1;
+        padding: 2%;
+    }
+}
+
+//if it is a image container, make it take up the whole space of parent
+figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// basic setup for text container
+.text-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.chart-container {
+    width: 100%;
+    position: relative;
+}
+
+//------------------------ section 1 ------------------------
+#section-1 {
+    img {
+        filter: grayscale(100%);
+    }
+
+    .flex-row:first-child {
+        .text-container {
+            justify-content: space-between;
+        }
+    }
+
+    .flex-row:last-child {
+        .text-container {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+//------------------------ section 2 ------------------------
+#section-2 {
+    .text-container {
+        padding: 5%;
+
+        &>*:first-child {
+            flex: 1;
+            color: $red;
+        }
+    }
+}
+
+//------------------------ section 2.5 ------------------------
+#section-2-5 {
+    .flex-row {
+        margin: 2%;
+    }
+
+    .flex-item {
+        .text-container {
+            justify-content: space-evenly;
+            padding: 2% 12%;
+            padding-left: 2%;
+        }
+
+        .chart-container {
+            .annotation {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+//------------------------ section 3 ------------------------
+#section-3 {
+    .flex-item {
+        padding: 4%;
+    }
+    .text-container {
+        padding-right: 20%;
+        span {
+            display: inline;
+        }
+    }
+
+}
+
+//------------------------ section 4 ------------------------
+#section-4 {
+    .text-container {
+        h1 {
+            text-align: center;
+            width: 55%;
+        }
+
+        p {
+            width: 50%;
+        }
+    }
+
+    figure {
+        img {
+            height: 90%;
+        }
+    }
+}
+
+//------------------------ section 5 ------------------------
+#section-5 {
+
+    .text-container {
+        padding: 2% 12%;
+        padding-left: 2%;
+
+        &>*:first-child {
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+//------------------------ section 6 ------------------------
+#section-6 {
+    .flex-row {
+        flex-direction: column;
+        margin: 0;
+        span{
+            display: inline-block;
+        }
+    }
+}
+
+//------------------------ section 7 ------------------------
+#section-7 {
+
+    //reset the vertical margin
+    .flex-row {
+        margin-top: 0;
+        margin-bottom: 0;
+        span{
+            display: inline-block;
+        }
+    }
+
+    .flex-row:last-child {
+        .text-container {
+            height: fit-content;
+            justify-content: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+
+            p {
+                width: 80%;
+            }
+        }
+    }
+}
+
+//------------------------ section 8 ------------------------
+#section-8 {
+    .flex-row:first-child {
+        margin: 0 5%;
+
+        span {
+            display: inline;
+        }
+        .flex-item {
+            padding: 2% 6%;
+        }
+
+        .text-container {
+            h1 {
+                font-size: 3rem;
+                line-height: 3.5rem;
+                text-align: justify;
+                .italic-serif {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+    .sqaure-card-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+//------------------------ section 9 ------------------------
+#section-9 {
+
+    .flex-row {
+        &:first-child {
+            h1 {
+                width: 60%;
+            }
+        }
+    }
+}
+
+//------------------------ section 10 ------------------------
+#section-10 {
+    .flex-row:first-child {
+        h1 {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+    .flex-row:last-child {
+        .text-container {
+            align-items: center;
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+    .chart-container {
+        h3 {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+//------------------------ section 11 ------------------------
+#section-11 {
+    h1 {
+        span {
+            display: inline-block;
+        }
+    }
+    .flex-row {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .flex-row:last-child {
+
+        #cobe {
+            width: 650px;
+            height: 650px;
+        }
+
+        .flex-item:last-child {
+            padding: 0 2%;
+            margin-right: 5%;
+        }
+    }
+}
+
+//------------------------ section 12 ------------------------
+#section-12 {
+    .text-container {
+        padding-left: 20%;
+        h2 {
+            font-size: 3rem;
+            align-self: flex-end;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+//------------------------ section 13 ------------------------
+#section-13 {
+    .flex-row {
+        .text-container {
+            padding-left: 20%;
+        }
+
+        .chart-container {
+            h3 {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+//------------------------ section 14 ------------------------
+#section-14 {
+    .flex-row {
+        flex-direction: column;
+
+        p {
+            padding: 0 25%;
+        }
+
+        .chart-container {
+
+            //center the actual chart container defined by Plotly
+            .svg-container {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+//------------------------ section 15 ------------------------
+#section-15 {
+    .flex-row {
+        .text-container {
+            padding-left: 12%;
+            align-items: flex-start;
+        }
+
+        .chart-container {
+            h3 {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+//------------------------ section 16 ------------------------
+#section-16 {
+    background: url("/src/images/planet-in-our-hand.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .text-container {
+        justify-content: flex-start;
+        margin-top: 2rem;
+
+        h1 {
+            padding: 3rem;
+            font-size: 5rem;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 5rem;
+            font-weight: 300;
+        }
+    }
+
+}

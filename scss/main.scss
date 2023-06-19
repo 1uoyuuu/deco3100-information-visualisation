@@ -1,0 +1,28 @@
+// import all the scss files here
+@import "base/reset.scss", "base/typography.scss", "base/color.scss";
+@import "layout/layout.scss";
+@import "component/webgl.scss", "component/card.scss", "component/carousel.scss", "component/image-background.scss", "component/accordion.scss";
+
+// * {
+//     border: 1px solid pink;
+// }
+
+
+// //setup scroll behaviour
+// body {
+//     overflow-x: hidden; //disable horizontal scrolling
+
+//     //set vertical scrolling to be snapped with each section
+//     #scroll-wrapper {
+//         overflow-y: scroll;
+//         height: 100vh;
+//         scroll-snap-points-y: repeat(100vh);
+//         scroll-snap-type: y mandatory;
+
+//         section {
+//             height: 100vh;
+//             scroll-snap-align: start;
+//             position: relative;
+//         }
+//     }
+// }

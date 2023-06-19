@@ -1,0 +1,21 @@
+Parent,Kingdom,Entity,Global Biomass
+,N/A,Total,545589000000
+Total,N/A,Animalia,2589000000
+Total,N/A,Plantae,450000000000
+Total,N/A,Microorganism,93000000000
+Animalia,Animalia,Annelids,200000000
+Microorganism,Monera,Archaea,7000000000
+Animalia,Animalia,Arthropods (marine),1000000000
+Animalia,Animalia,Arthropods (terrestrial),200000000
+Microorganism,Monera,Bacteria,70000000000
+Animalia,Animalia,Cnidarians,100000000
+Animalia,Animalia,Fish,700000000
+Microorganism,Fungi,Fungi,12000000000
+Animalia,Animalia,Humans,60000000
+Animalia,Animalia,Livestock,100000000
+Animalia,Animalia,Molluscs,200000000
+Animalia,Animalia,Nematodes,20000000
+Plantae,Plantae,Plants,450000000000
+Microorganism,Protista,Protists,4000000000
+Animalia,Animalia,Wild birds,2000000
+Animalia,Animalia,Wild mammals,7000000

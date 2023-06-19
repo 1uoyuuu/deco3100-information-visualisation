@@ -1,0 +1,12 @@
+Parent,Entity,Area(10000BCE),Area(1700),Area(1900),Area(2018)
+,Earth,51,51,51,51
+Earth,Land,14.9,14.9,14.9,14.9
+Earth,Ocean,36.1,36.1,36.1,36.1
+Land,Habitable Land,10.6,10.6,10.6,10.6
+Land,Barren Land,2.8,2.8,2.8,2.8
+Land,Glaciers,1.5,1.5,1.5,1.5
+Habitable Land,Forest,6,5.5,5,4
+Habitable Land,Wild Grassland,4.6,4,2.86,1.74
+Habitable Land,Built-up Area,0,0.005,0.01,0.06
+Habitable Land,Crops,0,0.325,0.95,1.6
+Habitable Land,Grazing,0,0.77,1.78,3.2

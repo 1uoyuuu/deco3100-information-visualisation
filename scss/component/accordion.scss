@@ -1,0 +1,47 @@
+$red: #F92F04;
+$dark: #26562F;
+$green: #048E56;
+
+.accordion-container {
+    margin-top: 8%;
+    .ac {
+        margin-top: 8px;
+        border: 1px solid $dark;
+        overflow: hidden;
+        .ac-header {
+            height: 3rem;
+            button {
+                background-color: white;
+                height: 100%;
+                padding: 0 4%;
+                border: none;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                text-align: left;
+
+
+                &:hover {
+                    color: $red;
+                    cursor: pointer;
+                }
+            }
+        }
+        .ac-panel {
+            background-color: white;
+            .ac-text {
+                padding: 4%;
+                padding-top: 0;
+                figure {
+                    margin-top: 2%;
+                    img {
+                        width: 100%;
+                    }
+                }
+                p {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
