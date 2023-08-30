@@ -81,7 +81,7 @@ const sphere = new THREE.Mesh(
     fragmentShader: EarthShader.fragmentShader,
     uniforms: {
       globeTexture: {
-        value: new THREE.TextureLoader().load("./src/images/earth-uv-map.webp"),
+        value: new THREE.TextureLoader().load("src/images/earth-uv-map.webp"),
       },
     },
   })
