@@ -4,9 +4,11 @@
 $red: #F92F04;
 $dark: #26562F;
 $green: #048E56;
+
 body {
     overflow-x: hidden;
 }
+
 section {
     min-height: 90vh;
     max-height: 150vh;
@@ -122,8 +124,10 @@ figure {
     .flex-item {
         padding: 4%;
     }
+
     .text-container {
         padding-right: 20%;
+
         span {
             display: inline;
         }
@@ -169,7 +173,8 @@ figure {
     .flex-row {
         flex-direction: column;
         margin: 0;
-        span{
+
+        span {
             display: inline-block;
         }
     }
@@ -182,7 +187,8 @@ figure {
     .flex-row {
         margin-top: 0;
         margin-bottom: 0;
-        span{
+
+        span {
             display: inline-block;
         }
     }
@@ -209,6 +215,7 @@ figure {
         span {
             display: inline;
         }
+
         .flex-item {
             padding: 2% 6%;
         }
@@ -218,6 +225,7 @@ figure {
                 font-size: 3rem;
                 line-height: 3.5rem;
                 text-align: justify;
+
                 .italic-serif {
                     font-size: 1.5em;
                 }
@@ -254,6 +262,7 @@ figure {
             margin: 0 auto;
         }
     }
+
     .flex-row:last-child {
         .text-container {
             align-items: center;
@@ -261,6 +270,7 @@ figure {
             margin: 0 auto;
         }
     }
+
     .chart-container {
         h3 {
             width: 70%;
@@ -277,10 +287,12 @@ figure {
             display: inline-block;
         }
     }
+
     .flex-row {
         margin-top: 0;
         margin-bottom: 0;
     }
+
     .flex-row:last-child {
 
         #cobe {
@@ -299,6 +311,7 @@ figure {
 #section-12 {
     .text-container {
         padding-left: 20%;
+
         h2 {
             font-size: 3rem;
             align-self: flex-end;
@@ -359,7 +372,7 @@ figure {
 
 //------------------------ section 16 ------------------------
 #section-16 {
-    background: url("/src/images/planet-in-our-hand.png");
+    background: url("../../src/images/planet-in-our-hand.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
