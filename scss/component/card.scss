@@ -70,19 +70,19 @@ $green: #048E56;
 
 
 .square-card-item:nth-child(1) .bg-wrapper.front {
-    background: url("../src/images/chicken.png");
+    background: url("./src/images/chicken.png");
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .square-card-item:nth-child(2) .bg-wrapper.front {
-    background: url("../src/images/cattle.png");
+    background: url("./src/images/cattle.png");
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .square-card-item:nth-child(3) .bg-wrapper.front {
-    background: url("../src/images/sheep.png");
+    background: url("./src/images/sheep.png");
     background-position: center center;
     background-repeat: no-repeat;
 }
