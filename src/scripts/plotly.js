@@ -1,3 +1,24 @@
+// Helper function to load CSV data using fetch API (replaces Plotly.d3.csv)
+async function loadCSV(url) {
+  const response = await fetch(url);
+  const text = await response.text();
+  const lines = text.split('\n');
+  const headers = lines[0].split(',');
+  const data = [];
+  
+  for (let i = 1; i < lines.length; i++) {
+    if (lines[i].trim()) {
+      const values = lines[i].split(',');
+      const row = {};
+      headers.forEach((header, index) => {
+        row[header.trim()] = values[index] ? values[index].trim() : '';
+      });
+      data.push(row);
+    }
+  }
+  return data;
+}
+
 const unpack = (data, key) => data.map((row) => row[key]); //unpack function to extract data from csv file, credit to week 4 tutorial slides
 // by default all the chart config will not display the modebar to distract user
 // it will help user to focus more on the story in my opinion
@@ -12,7 +33,7 @@ const green = "#048E56";
 // ------------------------------ CHART AREA ------------------------------
 
 //treemap for global biomass distribution
-Plotly.d3.csv("./src/data-sets/biomass-data-2018.csv", (biomassData) => {
+loadCSV("./src/data-sets/biomass-data-2018.csv").then((biomassData) => {
   const labels = unpack(biomassData, "Entity");
   const parents = unpack(biomassData, "Parent");
   const biomass = unpack(biomassData, "Global Biomass").map(Number); // parse string into numbers
@@ -106,7 +127,7 @@ Plotly.d3.csv("./src/data-sets/biomass-data-2018.csv", (biomassData) => {
 });
 
 //treemap chart for land use change
-Plotly.d3.csv("src/data-sets/land-use-data.csv", (landData) => {
+loadCSV("src/data-sets/land-use-data.csv").then((landData) => {
   const labels = unpack(landData, "Entity");
   const landuseBefore = unpack(landData, "Area(10000BCE)").map(Number); // parse string into numbers
   const landuse1700 = unpack(landData, "Area(1700)").map(Number);
@@ -285,9 +306,7 @@ Plotly.d3.csv("src/data-sets/land-use-data.csv", (landData) => {
 });
 
 // line chart for average daily calorie intake
-Plotly.d3.csv(
-  "src/data-sets/dietary-composition-in-calorie.csv",
-  (calorieData) => {
+loadCSV("src/data-sets/dietary-composition-in-calorie.csv").then((calorieData) => {
     const calorieYear = unpack(calorieData, "Year");
     const totalCalorie = unpack(calorieData, "Daily Total Calorie");
     const meatCalorie = unpack(
@@ -381,7 +400,7 @@ Plotly.d3.csv(
 );
 
 // line chart for living planet index change
-Plotly.d3.csv("src/data-sets/living-planet-index.csv", (planetData) => {
+loadCSV("src/data-sets/living-planet-index.csv").then((planetData) => {
   const indexYear = unpack(planetData, "Year");
   const indexValue = unpack(planetData, "Living Planet Index");
 
@@ -441,7 +460,7 @@ Plotly.d3.csv("src/data-sets/living-planet-index.csv", (planetData) => {
 });
 
 // choropleth for wildlife habitat loss by 2050
-Plotly.d3.csv("src/data-sets/habitat-change-by-2050.csv", (habitatData) => {
+loadCSV("src/data-sets/habitat-change-by-2050.csv").then((habitatData) => {
   const countries = unpack(habitatData, "Entity");
   const locations = unpack(habitatData, "Code");
   //delete the % sign at the end of each entry and parse it into numbers
@@ -638,7 +657,7 @@ var layout = {
 };
 Plotly.newPlot("food-production-emission-chart", data, layout, config);
 
-Plotly.d3.csv("src/data-sets/top-10-land-intensive-food.csv", (landData) => {
+loadCSV("src/data-sets/top-10-land-intensive-food.csv").then((landData) => {
   const foodY = unpack(landData, "Entity");
   const landX = unpack(landData, "Land Use");
 
@@ -713,9 +732,7 @@ Plotly.d3.csv("src/data-sets/top-10-land-intensive-food.csv", (landData) => {
 });
 
 // stacked barchart for land required for different diet patterns
-Plotly.d3.csv(
-  "src/data-sets/land-required-for-different-diets.csv",
-  (landData) => {
+loadCSV("src/data-sets/land-required-for-different-diets.csv").then((landData) => {
     const dietPattern = unpack(landData, "Diet Pattern");
     const cropland = unpack(landData, "Cropland");
     const pasture = unpack(landData, "Pasture");
@@ -860,9 +877,7 @@ Plotly.d3.csv(
 );
 
 // normal bar chart for emission reduction methods
-Plotly.d3.csv(
-  "./src/data-sets/emission-reduction-measures.csv",
-  (emissionData) => {
+loadCSV("./src/data-sets/emission-reduction-measures.csv").then((emissionData) => {
     const method = unpack(emissionData, "Entity");
     const emission = unpack(emissionData, "Emission").map(Number);
 
